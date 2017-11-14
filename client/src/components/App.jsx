@@ -44,7 +44,7 @@ class App extends React.Component {
   render() {
   return (
     <div className="app">
-      <h1>BMI Calculator</h1>
+      <h1>Physical Record</h1>
       <form>
         <div>
           <label>Height</label>
@@ -54,6 +54,8 @@ class App extends React.Component {
           <label>Weight</label>
           <Attributes value={this.state.weight} onChange={this.weightChange.bind(this)} />
         </div>
+      <BMI data={this.state} />
+      <Logger />
       </form>
     </div>
     );
@@ -64,8 +66,15 @@ class App extends React.Component {
 }
 
 
-
 window.App = App;
+
+
+//  onClick , options = {
+
+//   height: this.state.height.value
+//   weight: this.state.weight.value
+
+// }
 
 
 
